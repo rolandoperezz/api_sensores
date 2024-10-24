@@ -1,0 +1,8 @@
+{
+    "mariaDB":{
+        "host": "localhost",
+        "user": "root",
+        "password": "admin",
+        "database": "ajseguro"
+        }
+}
