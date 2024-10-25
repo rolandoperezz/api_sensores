@@ -37,6 +37,9 @@ async function ConsultaSensores() {
 }
 
 
+
+
+
 // Función para insertar una nueva medición en la tabla
 async function InsertarSensor(array) {
   const connectionConfig = { ...config.get('azure'), connectTimeout: 10000 };

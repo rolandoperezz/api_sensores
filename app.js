@@ -21,4 +21,5 @@ app.use(consulta)
 
 app.use(cors());
 
+
 module.exports = app;
