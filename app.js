@@ -1,8 +1,9 @@
-'use scritc'
+'use strict'
 const express = require("express");
 const app = express();
 const bodyParser= require('body-parser');
 const cors = require('cors');
+var consulta = require('./sensores/ruta')
 
 
 app.use(bodyParser.json());  
@@ -15,6 +16,8 @@ app.use((req, res, next)=> {
     res.header('Access-Control-Allow-Methods', 'PUT, POST, GET');
     next();
 });
+
+app.use(consulta)
 
 app.use(cors());
 

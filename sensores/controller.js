@@ -1,17 +1,29 @@
 'use scritc'
-require('module-alias/register')
 
-const Maseguradora = require('./model');
 
-async function consAseguradora(req, res) {
+const modelo = require('./model');
+
+async function consSensores(req, res) {
     try {
-        await Maseguradora.ConsultaAseguradora(req.body).then(resp => {
+        await modelo.ConsultaSensores().then(resp => {
             res.status(200).json(resp)
         })
     } catch (error) {
-        console.error('Controller.Cat_aseguradora,cons_aseguradora : ', error)
-        res.status(400).json({ 'estado': false, 'codigo': 206, 'descrip': 'Error en Consulta aseguradora' })
+        console.error('Controller.sensores : ', error)
+        res.status(400).json({ 'estado': false, 'codigo': 206, 'descrip': 'Error en sensores' })
     }
 }
 
-module.exports = {  consAseguradora}
+async function insSensores(req, res) {
+    try {
+        await modelo.InsertarSensor(req.body).then(resp => {
+            res.status(200).json(resp)
+        })
+    } catch (error) {
+        console.error('Controller.insertar : ', error)
+        res.status(400).json({ 'estado': false, 'codigo': 206, 'descrip': 'Error en insertar' })
+    }
+}
+
+
+module.exports = {  consSensores,insSensores}

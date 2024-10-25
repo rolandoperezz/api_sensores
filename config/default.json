@@ -1,8 +1,8 @@
 {
-    "mariaDB":{
-        "host": "localhost",
-        "user": "root",
-        "password": "admin",
-        "database": "ajseguro"
+    "azure":{
+        "host": "sql5.freesqldatabase.com",
+        "user": "sql5740578",
+        "password": "JqwBAEhCs3",
+        "database":"sql5740578"
         }
 }
